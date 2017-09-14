@@ -1,0 +1,15 @@
+extends layout.jade
+block content
+    table(class="table")
+     thead
+       tr
+        th Titile
+        th Content
+        th Featured image
+     tbody
+       each product in data['products']
+        tr 
+         td #{product.title}   
+         td !{product.body_html}
+         td 
+          img(class="img-thumbnail" src="#{product.image.src}")
